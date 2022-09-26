@@ -1,0 +1,20 @@
+﻿@page
+@model Equipos.Pages.Eliminar_seleccionModel
+@{
+}
+<div class="d-flex justify-content-center"> 
+    <div class="card col-6">
+        <div class="card-header text-white " style="background-color: #56042C;">
+            <h3>Eliminar Seleccion</h3>
+        </div>
+        <form method="post">
+            <div class="card-body">
+               <p>¿Esta seguro de eliminar la seleccion?</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a asp-page="/Selecciones" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>

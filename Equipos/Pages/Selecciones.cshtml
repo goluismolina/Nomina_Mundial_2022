@@ -1,0 +1,35 @@
+﻿@page
+@model Equipos.Pages.SeleccionesModel
+@{
+}
+
+<div class="card">
+    <div class="card-header text-white d-flex justify-content-between" style="background-color: #56042C;">
+        <h3>Listado de Selecciones</h3>
+        <a asp-page="/Nueva-Seleccion" class="btn btn-success"><i class="bi bi-file-earmark-plus"></i> Agregar Selección</a>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Seleccion</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var selecciones in Model.Selecciones)
+                {
+                    <tr>
+                        <td>@selecciones.Id</td>
+                        <td>@selecciones.Seleccion</td>
+                        <td>
+                            <a asp-page="/Editar-Seleccion" asp-route-id="@selecciones.Id" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+                            <a asp-page="/Eliminar-seleccion" asp-route-id="@selecciones.Id" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</a>
+                        </td>
+                    </tr>
+                }    
+            </tbody>
+        </table>
+    </div>
+</div>

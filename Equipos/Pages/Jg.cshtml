@@ -1,0 +1,40 @@
+﻿@page
+@model Equipos.Pages.JgModel
+@{
+}
+<div class="card">
+    <div class="card-header text-white d-flex justify-content-between" style="background-color: #56042C;">
+        <h3>Listado de Selecciones</h3>
+        <a asp-page="/Nuevo-Jugador" class="btn btn-success"><i class="bi bi-file-earmark-plus"></i> Agregar Jugador</a>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>CLub</th>
+                    <th>Selección</th>
+                    <th>Posicion</th>
+                    <th>Nacimiento</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                    <tr>
+                        <td>01</td>
+                        <td>MESIRVE</td>
+                        <td>PSG</td>
+                        <td>ARGENTINA</td>
+                        <td>DELANTERO</td>
+                        <td>01/01/2000</td> 
+                        <td>
+                            <a asp-page="/Editar-Jugador" asp-route-id="" class="btn btn-warning"><i class="bi bi-pencil-square"></i> Editar</a>
+                            <a asp-page="/Eliminar-Jugador" asp-route-id="" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</a>
+                        </td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>

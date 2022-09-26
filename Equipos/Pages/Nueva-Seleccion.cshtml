@@ -1,0 +1,25 @@
+﻿@page
+@model Equipos.Pages.Nueva_SeleccionModel
+@{
+}
+<div class="d-flex justify-content-center"> 
+    <div class="card col-6">
+        <div class="card-header text-white " style="background-color: #56042C;">
+            <h3>Nueva Seleccion</h3>
+        </div>
+        <form method="post">
+            <div class="card-body">
+                <div class="form-group">
+                    <label>Selección</label>
+                    <input asp-for="Seleccion" class="form-control" />
+                    <span asp-validation-for="Seleccion" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <a asp-page="/Selecciones" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
